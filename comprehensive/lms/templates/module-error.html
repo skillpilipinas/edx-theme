@@ -1,0 +1,29 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%
+    support_link='<a href="/faq">support</a>'
+%>
+<p>${_("Please contact {support_link} and let us know.").format(support_link=support_link)}</p>
+<section class="outside-app">
+  <h1>
+    ${_("There has been an error on the {platform_name} servers").format(
+        platform_name=u"<em>{}</em>".format(settings.PLATFORM_NAME)
+    )}
+  </h1>
+  <p>${_("Please contact {support_link} and let us know.").format(support_link=support_link)}</p>
+
+% if staff_access:
+<h1>${_("Details")}</h1>
+
+<p>${_("Error:")}
+<pre>
+${error | h}
+</pre>
+</p>
+
+<p>${_("Raw data:")}
+
+<pre>${data | h}</pre>
+</p>
+
+% endif
+</section>
