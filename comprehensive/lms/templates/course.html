@@ -2,11 +2,12 @@
 <%namespace name='static' file='static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
-from django.core.urlresolvers import reverse
+from django.urls import reverse
+from six import text_type
 %>
 <%page args="course" expression_filter="h"/>
 <article class="course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
-  <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">
+  <a href="${reverse('about_course', args=[text_type(course.id)])}">
     <header class="course-image">
       <div class="cover-image">
         <img src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
@@ -25,29 +26,21 @@ from django.core.urlresolvers import reverse
       else:
           course_date_string = ''
       %>
-	  % if course.self_paced == False:
-		  % if course.advertised_start is not None:
-			  <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
-		  % else:
-			  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
-		  % endif
-	  % else:
-	      <li>Self-Paced</li>
-      % endif	  
+      % if course.advertised_start is not None:
+          <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
+      % else:
+          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
+      % endif
     </div>
     <div class="sr">
       <ul>
         <li>${course.display_org_with_default}</li>
         <li>${course.display_number_with_default}</li>
-        % if course.self_paced == False:
-			% if course.advertised_start is not None:
-				<li>${_("Starts")}: <time itemprop="startDate">${course.advertised_start}</time></li>
-			% else:
-				<li>${_("Starts")}: <time class="localized_datetime" itemprop="startDate" data-format="shortDate" data-datetime="${course_date_string}"></time></li>
-			% endif
-		% else:
-	      <li>Self-Paced</li>
-        % endif	  
+        % if course.advertised_start is not None:
+            <li>${_("Starts")}: <time itemprop="startDate">${course.advertised_start}</time></li>
+        % else:
+            <li>${_("Starts")}: <time class="localized_datetime" itemprop="startDate" data-format="shortDate" data-datetime="${course_date_string}"></time></li>
+        % endif
       </ul>
     </div>
   </a>

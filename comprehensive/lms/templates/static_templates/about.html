@@ -1,14 +1,8 @@
-## mako
-<%!
-  from django.core.urlresolvers import reverse
-  from django.utils.translation import ugettext as _
-%>
-<%namespace name='static' file='/static_content.html'/>
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
 
-<%inherit file="/main.html" />
-
-<%block name="title"><title>${_('About')}</title></%block>
-
+<%block name="pagetitle">${_("About")}</%block>
 <%block name="js_extra">
   <script type="text/javascript">
     $(function() {
@@ -37,6 +31,7 @@
   </script>
 </%block>
 
+<main id="main" aria-label="Content" tabindex="-1">
 <section class="container about" style="width: auto;">
   <nav id="about-menu">
     <a href="#about" class="about active">${_('About')}</a>
@@ -76,7 +71,7 @@
       </div>
       <article>
         <h2>${_('Careers')}</h2>
-        
+
         <p>Your job postings go here!</p>
 
         <p>&nbsp;</p>
@@ -105,3 +100,4 @@
   </section>
 
 </section>
+</main>
