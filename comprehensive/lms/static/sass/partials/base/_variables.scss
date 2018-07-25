@@ -1,4 +1,4 @@
-@import 'lms/static/sass/partials/base/variables';
+@import 'lms/static/sass/partials/lms/theme/variables';
 
 //-----------------
 //  Color variables (from Stanford palette unless noted)
@@ -55,15 +55,15 @@ $black-80: #585858;
 //  Font Assignment
 //-----------------
 $theme-sans-font: 'Segoe UI';
-$sans-serif: $theme-sans-font, $sans-serif;
+$sans-serif: $theme-sans-font, sans-serif;
 $body-font-family: $sans-serif;
 
 $theme-serif-font: 'Segoe UI';
-$serif: $theme-serif-font, $serif;
+$serif: $theme-serif-font, serif;
 
 // newer variables/standards
-$f-serif: $theme-sans-font, $f-serif;
-$f-sans-serif: $theme-sans-font, $f-sans-serif;
+$f-serif: $theme-sans-font, serif;
+$f-sans-serif: $theme-sans-font, sans-serif;
 
 //-----------------
 //  Theme Element Assignments
@@ -195,3 +195,4 @@ $a-tags: 'a, a:active, a:hover, a:visited';
 //-----------------
 // Home Page Background Image
 $homepage-bg-image: url('/static/comprehensive/images/REX_BG_1.png');
+
