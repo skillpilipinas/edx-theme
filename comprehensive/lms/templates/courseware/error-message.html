@@ -1,4 +1,9 @@
-<%! from django.utils.translation import ugettext as _ %>
+## mako
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
 <%
     support_link='<a href="/faq">support</a>'
 %>

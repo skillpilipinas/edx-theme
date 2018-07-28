@@ -2,7 +2,7 @@
 <%def name="online_help_token()"><% return "register" %></%def>
 <%!
 from django.utils.translation import ugettext as _
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 %>
 
 <%block name="title">${_("Sign Up")}</%block>
@@ -50,6 +50,7 @@ from django.core.urlresolvers import reverse
             <li class="field text required" id="field-password">
               <label for="password">${_("Password")}</label>
               <input id="password" type="password" name="password" />
+              <span id="password_error" class="tip tip-error hidden" role="alert"></span>
             </li>
 
             <li class="field-group">
@@ -65,8 +66,10 @@ from django.core.urlresolvers import reverse
             </li>
 
             <li class="field checkbox required" id="field-tos">
-             <input id="tos" name="terms_of_service" type="checkbox" value="true" />               
-     		  I agree to the <a href="http://openedx.microsoft.com/tos" target="_blank">Terms of Service </a>
+              <input id="tos" name="terms_of_service" type="checkbox" value="true" />
+              <label for="tos">
+                ${_("I agree to the {a_start} Terms of Service {a_end}").format(a_start='<a data-rel="edx.org" href="{}">'.format(marketing_link('TOS')), a_end="</a>")}
+              </label>
             </li>
           </ol>
         </fieldset>
