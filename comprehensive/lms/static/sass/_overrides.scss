@@ -177,18 +177,18 @@ p a{&:hover, &:focus {
 //------------------
 
 // The user dropdown menu on the right hand side
-header.header-global .user a.user-link{
+header.global-header .user a.user-link{
     position: relative;
     text-transform: none;
     font-size: 14px;
     letter-spacing: 0;
 }
 
-header.header-global .primary > a {
+header.global-header .primary > a {
     background-color: transparent;
 }
 
-header.header-global > nav > ol.user > li.primary > a {
+header.global-header > nav > ol.user > li.primary > a {
     &:hover, &:focus {
         background-color: transparent !important;
         text-decoration: none !important;
@@ -197,11 +197,11 @@ header.header-global > nav > ol.user > li.primary > a {
     }
 }
 
-header.header-global .user .dropdown-menu li>a:hover,header.global .user .dropdown-menu li>a:focus{
+header.global-header .user .dropdown-menu li>a:hover,header.global .user .dropdown-menu li>a:focus{
     color: $ms-color !important;
 }
 
-header.header-global .user .dropdown {
+header.global-header .user .dropdown {
     padding: 10px;
 }
 
@@ -279,7 +279,7 @@ header.global.slim h2.course-header {
     margin-top: 1.2em !important;
 }
 
-// Hide the Limited Profile message in My Profile page since .header-global.slim .nav-main, .header-global.slim .nav-globalwe do not let users to enter their age to promote to Full Profile
+// Hide the Limited Profile message in My Profile page since .global-header.slim .nav-main, .global-header.slim .nav-globalwe do not let users to enter their age to promote to Full Profile
 div.wrapper-profile-field-account-privacy {
     display: none !important;
 }
