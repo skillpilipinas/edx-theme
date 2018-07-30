@@ -1,0 +1,9 @@
+.content-wrapper {
+  max-width: map-get($container-max-widths, xl) !important;
+  //margin-top: $baseline;
+  //padding: 0 0 $baseline/2;
+
+  @include media-breakpoint-up(md) {
+    //padding: 0 $baseline $baseline/2;
+  }
+}
