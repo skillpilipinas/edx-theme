@@ -12,6 +12,15 @@ html {
 }
 
 //-----------------
+// Content Styling
+//-----------------
+.content-wrapper {
+    max-width: map-get($container-max-widths, xl);
+    @include media-breakpoint-up(md) {
+    }
+}
+
+//-----------------
 // Header Styling
 //-----------------
 .home {
