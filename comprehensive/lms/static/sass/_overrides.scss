@@ -439,3 +439,13 @@ table.faq-table {
 #msccLearnMore {
     color: $ms-color !important;
 }
+
+.content-wrapper {
+    max-width: map-get($container-max-widths, xl) !important;
+    margin-top: 0 !important;
+    padding: 0 0 0 !important;
+
+    @include media-breakpoint-up(md) {
+        padding: 0 0 0 !important;
+    }
+}
