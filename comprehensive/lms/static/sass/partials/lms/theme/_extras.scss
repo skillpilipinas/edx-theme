@@ -263,6 +263,7 @@ div.course-actions > a.enter-course:hover {
 
 //text - selfpaced written on course container
 .courses-container .courses .courses-listing li{
+    max-width: 1200px;
     margin: auto;
     line-height: 20.72px;
     padding: 2px 15px;
@@ -454,4 +455,8 @@ table.faq-table {
     @include media-breakpoint-up(md) {
         padding: 0 0 0 !important;
     }
+}
+
+.static-container {
+    max-width: 1200px !important;
 }
