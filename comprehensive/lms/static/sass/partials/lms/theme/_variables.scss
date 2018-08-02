@@ -1,3 +1,5 @@
+$primary: #0072c6;
+
 @import 'lms/static/sass/partials/lms/theme/variables';
 
 $baseline: 20px !default;
@@ -8,7 +10,8 @@ $baseline: 20px !default;
 // MS Blue Color: CourseName, footer links, top left buttons and other buttons (the one on the course page), also the links on the page texts get that color.
 // This is the common MS Blue colour for all MS sites.
 $ms-color: #0072c6;
-$primary: $ms-color;
+
+
 // Main Color variables
 // White Color
 $main-color: #FFFFFF;
