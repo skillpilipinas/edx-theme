@@ -1,5 +1,5 @@
 <%inherit file="../rex_email_footer.html"/>
-<%! from django.core.urlresolvers import reverse %>
+<%! from django.urls import reverse %>
 <%! from django.utils.translation import ugettext as _ %>
 <%! from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers %>
 ${_("This is to confirm that you changed the e-mail associated with "
