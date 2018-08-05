@@ -53,11 +53,20 @@ html {
 //--------------------------------
 
 // Register link in header
-.register-btn:hover{
+
+a.register-btn {
+  background: theme-color("inverse");
+  color: theme-color("primary");
+  font-weight: $font-weight-normal;
+
+  &:hover {
     text-decoration: underline !important;
-	color: $ms-color !important;
+    color: theme-color("primary") !important;
+    background-color: theme-color("inverse") !important;
+  }
 }
 
+sign-in-btn
 // Sign in link on the header
 .btn-primary:hover{
     background-color: $ms-primary-button-hover !important;
@@ -68,7 +77,7 @@ html {
 //------------------
 // The register button on the registration page
 .register-button{
-    background-color: $ms-color !important;
+    background-color: theme-color("primary") !important;
     text-shadow: none;
 }
 
@@ -77,7 +86,7 @@ html {
 }
 
 .register-button:focus{
-    border: 1px dotted $ms-color !important;
+    border: 1px dotted theme-color("primary") !important;
 }
 
 // The secondary button (sign in button) on the registration page
@@ -115,7 +124,7 @@ div.cta-login a.cta-login-action:hover{
 div.main-cta > a.register {
     border: none !important;
     color: $main-color;
-    background-color: $ms-color;
+    background-color: theme-color("primary");
     background-image: none !important;
     text-shadow: none !important;
 }
@@ -145,7 +154,7 @@ div.cta-login-action {
 // Sign in Page
 //------------------
 .login-button{
-    background-color: $ms-color !important;
+    background-color: theme-color("primary") !important;
     text-shadow: none;
 }
 
@@ -154,14 +163,14 @@ div.cta-login-action {
 }
 
 .login-button:focus{
-    border: 1px dotted $ms-color !important;
+    border: 1px dotted theme-color("primary") !important;
 }
 
 .forgot-password {
     a:hover{
         text-decoration: underline !important;
     }
-    color: $ms-color !important;
+    color: theme-color("primary") !important;
 }
 
 .forgot-password:hover {
@@ -174,7 +183,7 @@ div.cta-login-action {
 
 //link style
 p a{&:hover, &:focus {
- color: $ms-color !important;
+ color: theme-color("primary") !important;
  }
 }
 
@@ -199,12 +208,12 @@ header.global-header > nav > ol.user > li.primary > a {
         background-color: transparent !important;
         text-decoration: none !important;
         cursor: pointer !important;
-        color: $ms-color !important;
+        color: theme-color("primary") !important;
     }
 }
 
 header.global-header .user .dropdown-menu li>a:hover,header.global .user .dropdown-menu li>a:focus{
-    color: $ms-color !important;
+    color: theme-color("primary") !important;
 }
 
 header.global-header .user .dropdown {
@@ -217,12 +226,12 @@ header.global-header .user .dropdown {
 }
 
 .fa-sort-desc:hover {
-    color: $ms-color !important;
+    color: theme-color("primary") !important;
 }
 
 .dashboard .my-courses .empty-dashboard-message a {
     background: $main-color;
-    background-color: $ms-color;
+    background-color: theme-color("primary");
     color: $main-color !important;
     font-family: "Segoe UI","Open Sans",Verdana,Geneva,sans-serif,sans-serif;
     text-shadow: none;
@@ -258,7 +267,7 @@ header.global-header .user .dropdown {
 //------------------
 
 div.course-actions > a.enter-course:hover {
-    background-color: $ms-color !important;
+    background-color: theme-color("primary") !important;
 }
 
 //text - selfpaced written on course container
@@ -361,11 +370,11 @@ button#orders-tab, button#accounts-tab {
                 margin: 0 20px 20px 0;
             }
             .nav-colophon a{
-                color:$ms-color !important;
+                color:theme-color("primary") !important;
             }
             .nav-colophon a:hover{
                 text-decoration:underline;
-                color:$ms-color !important;
+                color:theme-color("primary") !important;
             }
         }
 
@@ -444,7 +453,7 @@ table.faq-table {
 }
 
 #msccLearnMore {
-    color: $ms-color !important;
+    color: theme-color("primary") !important;
 }
 
 .content-wrapper {
