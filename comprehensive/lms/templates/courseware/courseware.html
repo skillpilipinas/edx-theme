@@ -13,7 +13,12 @@ from edxnotes.helpers import is_feature_enabled as is_edxnotes_enabled
 from openedx.core.djangolib.js_utils import js_escaped_string
 from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_page_title, COURSE_OUTLINE_PAGE_FLAG
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 %>
+## <%
+##    my_course_org_filter = configuration_helpers.get_value('course_org_filter')
+## %>
+## % if my_course_org_filter == course.display_org_with_default:
 <%
   include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and (course.enable_proctored_exams or course.enable_timed_exams)
 %>
@@ -36,6 +41,14 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
     <%static:include path="common/templates/${template_name}.underscore" />
 </script>
 % endfor
+
+% if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
+    % for template_name in ["course_search_item", "course_search_results", "search_loading", "search_error"]:
+        <script type="text/template" id="${template_name}-tpl">
+            <%static:include path="search/${template_name}.underscore" />
+        </script>
+    % endfor
+% endif
 
 % if include_special_exams is not UNDEFINED and include_special_exams:
   % for template_name in ["proctored-exam-status"]:
@@ -260,3 +273,7 @@ ${HTML(fragment.foot_html())}
       % endif
     </nav>
 % endif
+## <%include file="../modal/accessible_confirm.html" />
+## % else:
+## <div>Unauthorized access. Error Code: 1002</div>
+## % endif

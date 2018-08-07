@@ -50,7 +50,7 @@ from openedx.core.djangolib.js_utils import js_escaped_string
         % if download_video_link:
         <div class="wrapper-download-video">
             <h4 class="hd hd-5">${_('Video')}</h4>
-            <a class="btn-link video-sources video-download-button" href="${download_video_link}">
+            <a class="btn-link video-sources video-download-button" href="${download_video_link}" download>
                 ${_('Download video file')}
             </a>
         </div>
