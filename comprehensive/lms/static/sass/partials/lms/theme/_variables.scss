@@ -1,8 +1,4 @@
-$primary: #0072c6;
 
-@import 'lms/static/sass/partials/lms/theme/variables';
-
-$baseline: 20px !default;
 //-----------------
 //  Color variables (from Stanford palette unless noted)
 //-----------------
@@ -11,6 +7,13 @@ $baseline: 20px !default;
 // This is the common MS Blue colour for all MS sites.
 $ms-color: #0072c6;
 
+//Assign MS Blue Color as primary color of the theme
+$primary: $ms-color;
+$inverse: #FFFFFF;
+
+@import 'lms/static/sass/partials/lms/theme/variables';
+
+$baseline: 20px !default;
 
 // Main Color variables
 // White Color
