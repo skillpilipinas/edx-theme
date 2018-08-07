@@ -52,10 +52,20 @@ html {
 }
 
 .global-header {
+    padding-bottom: 20px !important;
     .main-header {
         margin: 0 auto;
         max-width: 1260px;
     }
+    .header-logo{
+        a {
+            @include margin($baseline*0.75, 0, 0, $baseline*2);
+        }
+    }
+}
+
+.courses-container {
+    max-width: 1200px !important;
 }
 //--------------------------------
 // Registration/Signin link on the header
