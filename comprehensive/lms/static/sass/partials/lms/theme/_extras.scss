@@ -59,7 +59,7 @@ html {
     }
     .header-logo{
         a {
-            @include margin($baseline*0.75, 0, 0, $baseline*2);
+            @include margin($baseline*1.5, 0, 0, $baseline*2);
         }
     }
 }
