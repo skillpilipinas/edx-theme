@@ -17,6 +17,7 @@ html {
 	text-decoration: none;
 }
 
+
 //-----------------
 // Header Styling
 //-----------------
@@ -48,13 +49,11 @@ html {
     text-align: center !important;
 }
 
-.home > header .global-header > div .main-header {
-    margin: 0 auto !important;
-    max-width: 1260px !important;
-}
-
-.home > header .global-header > div main-header > h1 .header-logo > a .logo {
-        float: left !important;
+.global-header {
+    .main-header {
+        margin: 0 auto;
+        max-width: 1260px;
+    }
 }
 //--------------------------------
 // Registration/Signin link on the header
