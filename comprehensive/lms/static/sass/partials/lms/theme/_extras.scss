@@ -75,7 +75,10 @@ a.register-btn {
   }
 }
 
-sign-in-btn
+.sign-in-btn:hover{
+    background-color: $ms-primary-button-hover !important;
+    color: #FFFFFF !important;
+}
 // Sign in link on the header
 .btn-primary:hover{
     background-color: $ms-primary-button-hover !important;

@@ -50,16 +50,16 @@ from six import text_type
             <a class="register-btn" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register Now")}</a>
           </div>
           <div class="mobile-nav-item hidden-mobile nav-item">
-            <a class="sign-in-btn btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
+            <a class="sign-in-btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
           </div>
         % else:
           % if allow_public_account_creation:
             <div class="mobile-nav-item hidden-mobile nav-item">
-              <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
+              <a class="register-btn" href="/register${login_query()}">${_("Register Now")}</a>
             </div>
           % endif
           <div class="mobile-nav-item hidden-mobile nav-item">
-            <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
+            <a class="sign-in-btn" href="/login${login_query()}">${_("Sign in")}</a>
           </div>
         % endif
       % endif
