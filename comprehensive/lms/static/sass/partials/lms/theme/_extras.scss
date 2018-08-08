@@ -58,9 +58,29 @@ html {
         max-width: 1260px;
     }
     .header-logo{
-        a {
-            @include margin($baseline*1.5, 0, 0, $baseline*2);
+      a {
+        @include float(left);
+        @include margin($baseline*1.5, 0, 0, $baseline*2);
+
+        display: block;
+
+        .logo {
+          @include float(left);
+
+          height: $header-logo-height;
         }
+
+        @include media-breakpoint-down(md) {
+          @include margin-left(50%);
+
+          height: $header-logo-height;
+          width: auto;
+
+          .logo {
+            @include margin-left(-50%);
+          }
+        }
+      }
     }
 }
 
