@@ -1,0 +1,565 @@
+//-----------------
+// Override CSS
+//-----------------
+.content-wrapper {
+  max-width: map-get($container-max-widths, xl) !important;
+
+  @include media-breakpoint-up(md) {
+  }
+}
+
+html {
+    // The background color of the site
+    background-color: $main-color !important;
+}
+
+#{$a-tags}{
+	text-decoration: none;
+}
+
+//-----------------
+// Header Styling
+//-----------------
+.home > header {
+    height: 375;
+    background-position: center top;
+
+    .outer-wrapper {
+	     padding: 120px 0 !important;
+    }
+}
+
+.home > header .title > .heading-group {
+    display: block !important;
+    text-align: center !important;
+}
+
+.home > header .title > .heading-group h2 {
+    text-transform: none !important;
+    font-style: normal !important;
+    letter-spacing: 1px !important;
+}
+
+
+.home > header .title > .heading-group h1 {
+    text-align: center !important;
+    letter-spacing: 1px !important;
+}
+
+.global-header {
+    padding-bottom: 20px !important;
+    .main-header {
+        margin: 0 auto;
+    }
+    .header-logo{
+      a {
+        @include float(left);
+        @include margin($baseline*1.5, 0, 0, $baseline*2);
+
+        display: block;
+
+        .logo {
+          @include float(left);
+
+          height: $header-logo-height;
+        }
+
+        @include media-breakpoint-down(md) {
+          @include margin-left(50%);
+
+          height: $header-logo-height;
+          width: auto;
+
+          .logo {
+            @include margin-left(-50%);
+          }
+        }
+      }
+    }
+}
+
+.courses-container {
+    max-width: 1200px !important;
+}
+//--------------------------------
+// Registration/Signin link on the header
+//--------------------------------
+
+// Register link in header
+
+a.register-btn {
+  background: theme-color("inverse");
+  color: theme-color("primary");
+  font-weight: $font-weight-normal;
+
+  &:hover {
+    text-decoration: underline !important;
+    color: theme-color("primary") !important;
+    background-color: theme-color("inverse") !important;
+  }
+}
+
+.sign-in-btn:hover{
+    background-color: $ms-primary-button-hover !important;
+    color: #FFFFFF !important;
+}
+// Sign in link on the header
+.btn-primary:hover{
+    background-color: $ms-primary-button-hover !important;
+}
+
+//------------------
+// Registration Page
+//------------------
+// The register button on the registration page
+.register-button{
+    background-color: theme-color("primary") !important;
+    text-shadow: none;
+}
+
+.register-button:hover{
+    background-color: $ms-primary-button-hover !important;
+}
+
+.register-button:focus{
+    border: 1px dotted theme-color("primary") !important;
+}
+
+// The secondary button (sign in button) on the registration page
+.nav-btn{
+    border: 1px solid $ms-secondary-button-border !important;
+    color: $ms-primary-button-text !important;
+}
+
+.nav-btn:focus{
+    background-color: $ms-secondary-button-hover !important;
+    box-shadow: none !important;
+    border: 1px dotted $ms-secondary-button-border !important;
+}
+
+.nav-btn:hover{
+    background-color: $ms-secondary-button-hover !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+div.cta-login a.cta-login-action{
+    color: $ms-primary-button-text !important;
+}
+
+div.cta-login a.cta-login-action:hover{
+    background-color: $ms-secondary-button-hover !important;
+    color: $ms-primary-button-text !important;
+    border: none !important;
+}
+
+.cta-register:hover {
+    text-decoration: underline !important;
+}
+
+div.main-cta > a.register {
+    border: none !important;
+    color: $main-color;
+    background-color: theme-color("primary");
+    background-image: none !important;
+    text-shadow: none !important;
+}
+
+div.main-cta > a.register:hover {
+    background-color: $ms-primary-button-hover !important;
+}
+
+// In the registeration and sign in page we want text fields border to be visible with grey color
+form .field * {
+    border-color: grey !important;
+}
+
+// On the side-bar of registration page Already registered Sign in butons border is made visible with grey color
+div.cta-login-action {
+    border-color: grey !important;
+}
+
+
+//------------------
+// Sign in Page
+//------------------
+.login-button{
+    background-color: theme-color("primary") !important;
+    text-shadow: none;
+}
+
+.login-button:hover{
+    background-color: $ms-primary-button-hover !important;
+}
+
+.login-button:focus{
+    border: 1px dotted theme-color("primary") !important;
+}
+
+.forgot-password {
+    a:hover{
+        text-decoration: underline !important;
+    }
+    color: theme-color("primary") !important;
+}
+
+.forgot-password:hover {
+    text-decoration: underline !important;
+}
+
+.field-link:hover{
+ text-decoration: underline !important;
+}
+
+//link style
+p a{&:hover, &:focus {
+ color: theme-color("primary") !important;
+ }
+}
+
+//------------------
+// View when the user logged in
+// TODO: make this responsive!!
+// See edx.org for an example of what this
+// should look like
+//------------------
+
+// The user dropdown menu on the right hand side
+header.global-header .user a.user-link{
+    position: relative;
+    text-transform: none;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+header.global-header .primary > a {
+    background-color: transparent;
+}
+
+header.global-header > nav > ol.user > li.primary > a {
+    &:hover, &:focus {
+        background-color: transparent !important;
+        text-decoration: none !important;
+        cursor: pointer !important;
+        color: theme-color("primary") !important;
+    }
+}
+
+header.global-header .user .dropdown-menu li>a:hover,header.global .user .dropdown-menu li>a:focus{
+    color: theme-color("primary") !important;
+}
+
+header.global-header .user .dropdown {
+    padding: 10px;
+}
+
+// dropdown icon
+.fa-sort-desc:before{
+    content:"\f0dd";
+}
+
+.fa-sort-desc:hover {
+    color: theme-color("primary") !important;
+}
+
+.dashboard .my-courses .empty-dashboard-message a {
+    background: $main-color;
+    background-color: theme-color("primary");
+    color: $main-color !important;
+    font-family: "Segoe UI","Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    text-shadow: none;
+    font-weight: 500 !important;
+}
+
+.dashboard .profile-sidebar {
+    border-top: none !important;
+}
+
+//-------------------------
+// Certificate top shadow and putting into grey area changes
+//-------------------------
+
+.accomplishment-rendering {
+    border-top: 0;
+    top: inherit;
+}
+
+.wrapper-accomplishment-rendering {
+    padding: 30px 2.85714%;
+}
+
+.layout-accomplishment .accomplishment-rendering {
+    top: inherit;
+}
+
+.layout-accomplishment .wrapper-introduction {
+    margin-bottom: 0;
+}
+
+// View on the course view page
+//------------------
+
+div.course-actions > a.enter-course:hover {
+    background-color: theme-color("primary") !important;
+}
+
+//text - selfpaced written on course container
+.courses-container .courses .courses-listing li{
+    max-width: map-get($container-max-widths, xl);
+    margin: auto;
+    line-height: 20.72px;
+    padding: 2px 15px;
+    font-size: 14px;
+    color: #474747;
+}
+
+// The logo height on the course view page when the user signs in
+header.global.slim h1.logo img {
+    height: inherit !important;
+}
+
+// Align find courses link when user signs in
+.nav-global-01 {
+    margin-top: 0.2em !important;
+}
+
+// Align the course name on header when user logs in and view a course
+header.global.slim h2.course-header {
+    margin-top: 1.2em !important;
+}
+
+// Hide the Limited Profile message in My Profile page since we do not let users to enter their age to promote to Full Profile
+div.wrapper-profile-field-account-privacy {
+    display: none !important;
+}
+
+// Hide the birth date on the registration page
+#field-yob {
+    display: none !important;
+}
+
+// Hide birth date from the Additional Information section of Account Settings page
+div.u-field-year_of_birth {
+    display: none !important;
+}
+
+// Hide the Preferred Language on the Account Settings page
+div.u-field-language_proficiencies {
+    display: none !important;
+}
+
+// Hide the mailing address on the registration page
+#field-address-mailing {
+    display: none !important;
+}
+
+// On the Account Settings page make the textboxes for Full Name and E-Mail visible by showing the borders for UX
+#u-field-input-name {
+    border-color: grey !important;
+}
+#u-field-input-email {
+    border-color: grey !important;
+}
+
+// hide the social media links on the course about page
+.social-sharing {
+    display: none !important;
+}
+
+// Update User View Profile/Account Settings to take the maincolor
+body.view-profile {
+    background-color: $main-color;
+}
+
+body.ltr {
+    background-color: $main-color;
+}
+
+//-----------------
+// Hide the image on the password reset page
+//-----------------
+.view-passwordreset .introduction header {
+    background-image: none !important;
+}
+
+//-----------------
+// Footer Styling
+//-----------------
+.wrapper-footer {
+    box-shadow: none !important;
+
+    footer {
+        margin: 0 auto;
+
+        .colophon {
+            width: 80%;
+            float: left;
+            margin-top: 1.1em !important;
+            .nav-colophon li {
+                display: inline-block;
+                height: 35px;
+                float: left;
+                margin: 0 20px 20px 0;
+            }
+            .nav-colophon a{
+                color:theme-color("primary") !important;
+            }
+            .nav-colophon a:hover{
+                text-decoration:underline;
+                color:theme-color("primary") !important;
+            }
+        }
+
+        .references {
+            width: 15%;
+            float: right;
+        }
+
+    }
+
+    .copyright {
+        clear: both;
+    }
+}
+
+//-----------------
+// TOS Styling
+//-----------------
+section.tos {
+    box-sizing: border-box;
+    padding: 0 50px;
+
+    .print {
+        margin: 200px 0;
+    }
+}
+
+//------------------
+// FAQ Page Table Styling
+//------------------
+
+table.faq-table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th, td {
+    text-align: left;
+    padding: 10px;
+    }
+
+    tr:nth-child(even){background-color: $gray-2}
+}
+
+//------------------
+// COOKIE BANNER
+//------------------
+.cookie-banner-show {
+    padding-top: 0px !important;
+}
+
+.cookie-notice {
+    z-index: 10;
+    width: 100%;
+    height: 26px;
+    background-color: #EEEEEE !important;
+    vertical-align: central;
+}
+
+.cookie-notice-title {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+
+.cookie-color {
+    color: #000 !important;
+}
+
+.cookie-close {
+    float: right;
+    height: 10px;
+    width: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+// Discussion Footer styles to look like the rest of site
+.wrapper-footer {
+    footer#footer-openedx {
+        div.colophon {
+            float: left;
+        }
+        div.references {
+            float: right;
+        }
+    }
+}
+
+header.global-header.slim {
+    border-bottom: none;
+
+    .nav-main, .nav-global {
+        display: none;
+    }
+
+    .wrapper-header {
+        h1.logo {
+            a {
+                img {
+                    height: auto !important;
+                }
+            }
+        }
+
+        h2.course-header {
+            float: left;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #585858;
+            letter-spacing: 0;
+            margin-top: 9px;
+            margin-bottom: 0;
+            text-transform: none;
+            text-shadow: 0 1px 0 #fff;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            span.provider {
+                font: inherit;
+                font-weight: bold;
+            }
+        }
+
+        div.wrapper-user-menu {
+            a.menu-title {
+                background-color: transparent !important;
+                &:hover, &:focus {
+                    text-decoration: none !important;
+                    cursor: pointer !important;
+                    color: $ms-color !important;
+                }
+            }
+            div.user-menu {
+                button {
+                    &:hover, &:focus {
+                        background-color: transparent !important;
+                        text-decoration: none !important;
+                        cursor: pointer !important;
+                        color: $ms-color !important;
+                    }
+                }
+            }
+        }
+
+        a.doc-link {
+            margin-top: 13px;
+            &:hover, &:focus {
+                color: $ms-color !important;
+                text-decoration: none !important;
+                cursor: pointer !important;
+            }
+        }
+
+    }
+}
