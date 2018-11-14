@@ -203,7 +203,9 @@ div.cta-login-action {
 .login-button:focus{
     border: 1px dotted theme-color("primary") !important;
 }
-
+.action-primary{
+   width: 100% !important;
+}
 .forgot-password {
     a:hover{
         text-decoration: underline !important;
