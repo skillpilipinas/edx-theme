@@ -110,6 +110,11 @@ a.register-btn {
     background-color: $ms-primary-button-hover !important;
 }
 
+// Expand All/Collapse All button in course view
+#expand-collapse-outline-all-button:hover {
+    color: #FFFFFF !important;
+}
+
 //------------------
 // Registration Page
 //------------------
@@ -501,4 +506,9 @@ table.faq-table {
     @include media-breakpoint-up(md) {
         padding: 0 0 0 !important;
     }
+}
+
+// Instructor Dashboard Browse Button
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse {
+    float: right;
 }
