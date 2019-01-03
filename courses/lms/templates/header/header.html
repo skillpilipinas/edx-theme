@@ -15,6 +15,7 @@ from openedx.core.djangolib.markup import HTML, Text
 from branding import api as branding_api
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 %>
 
 ## Provide a hook for themes to inject branding on top.
@@ -29,14 +30,11 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     </%block>
 % endif
 
+% if configuration_helpers.get_value('ENABLE_COOKIE_CONSENT', settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False)):
+  <%include file="../widgets/cookie-consent.html" />
+% endif
+
 <header class="global-header ${'slim' if course else ''}">
-    % if use_cookie_banner:
-        ${static.renderReact(
-            component="CookiePolicyBanner",
-            id="cookie-policy-banner",
-            props={}
-        )}
-    % endif
     <div class="main-header">
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
         <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
@@ -63,10 +61,6 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     ff_link=HTML('<a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>'),
 )}</div>
 <![endif]-->
-% endif
-
-% if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
-  <%include file="../widgets/cookie-consent.html" />
 % endif
 
 % if header_language_selector_is_enabled():
