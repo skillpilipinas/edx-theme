@@ -149,6 +149,7 @@ from pipeline_mako import render_require_js_path_overrides
     </script>
 % endif
 
+  <link rel="stylesheet" type="text/css" href="https://c.s-microsoft.com/mscc/statics/mscc-0.4.1.min.css">
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
@@ -159,6 +160,20 @@ from pipeline_mako import render_require_js_path_overrides
   <div class="window-wrap" dir="${static.dir_rtl()}">
 % endif
     <a class="nav-skip" href="#main">${_("Skip to main content")}</a>
+    <div class="cookie-markup" style="display:block;">
+        <div class="cc-banner" style="display:block;">
+            <div class="cc-container">
+                <svg class="cc-icon cc-v-center" x="0px" y="0px" viewBox="0 0 44 44" height="30px" fill="none" stroke="currentColor">
+                    <circle cx="22" cy="22" r="20" stroke-width="2"></circle>
+                    <line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line>
+                    <line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line>
+                </svg>
+                <span class="cc-v-center cc-text">
+                This site will be undergoing maintenance beginning at 09:00 PST on the 28th of January 2019.
+                </span>
+            </div>
+        </div>
+    </div>
 
     % if not disable_header:
         <%include file="${static.get_template_path('header.html')}" args="online_help_token=online_help_token" />
