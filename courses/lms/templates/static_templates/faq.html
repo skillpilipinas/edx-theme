@@ -8,78 +8,115 @@
 <%block name="pagetitle">${_('Frequently Asked Questions')}</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
-<section class="container">
-    <br>
-    <h1 style="text-align: left;">Frequently Asked Questions</h1>
-    <h2><b>SUPPORT HOURS</b></h2>
-    Time Zone: Pacific Standard Time (PST)<br>
-    Period: Monday to Friday, EXCLUDING HOLIDAYS<br>
-    Hours: 9:00 AM - 5:00 PM, ONE DAY RESPONSE TIME<br>
-    <br>
-    <h2><b>BROWSER COMPATIBILITY</b></h2>
-    <p>The following table shows details about the operating systems and browser support.</p><br>
-    <style type="text/css">
-         .tg  {border-collapse:collapse;border-spacing:0;outline-style:solid;outline-color:#5882FA;outline-width: 1px;}
-         .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-width:1px;border-bottom-style:solid;overflow:hidden;word-break:normal;border-color:#5882FA;}
-         .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-bottom-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#5882FA;}
-         .tg .tg-yw4l{vertical-align:top;}
-    </style>
+    <section class="container">
+        <br>
+        <h1 style="text-align: left;">Frequently Asked Questions</h1>
+        <h2><b>SUPPORT HOURS</b></h2>
+        Time Zone: Pacific Standard Time (PST)<br>
+        Period: Monday to Friday, EXCLUDING HOLIDAYS<br>
+        Hours: 9:00 AM - 5:00 PM, ONE DAY RESPONSE TIME<br>
+        <br>
+        <h2><b>BROWSER COMPATIBILITY</b></h2>
+        <p>The following table shows details about the operating systems and browser support.</p><br>
+        <style type="text/css">
 
-    <table class="tg">
-        <tr bgcolor="#5882FA">
-            <th class="tg-yw4l"></th>
-            <th class="tg-yw4l"><b>Edge</b></th>
-            <th class="tg-yw4l"><b>IE11</b></th>
-        </tr>
-        <tr bgcolor="#A9D0F5">
-            <td class="tg-yw4l"><b>Windows 8/10</b></td>
-            <td class="tg-yw4l">Yes</td>
-            <td class="tg-yw4l">Yes</td>
-        </tr>
-    </table>
-    <h2><b>GET HELP</b></h2>
-    <p><b>Please read the FAQs below first.</b></p>
-    <p>If you don&#39;t find the answer to your questions, <a href="mailto:asklearning@microsoft.com">contact us</a></p><br>
-    <p><b>Q. What do I do if I get an error saying my email address belongs to an existing account when trying to view a course?</b></p>
-    <p>This happens when you have already created an account on https://openedx.microsoft.com using your @microsoft.com email address.
-To resolve this, please:</p><br>
-    <ol style="list-style: decimal;">
-	<li>Sign-in to the <a href="https://openedx.microsoft.com" target="_blank">https://openedx.microsoft.com</a> site with your @microsoft.com email address.</li>
-        <li>Follow the instructions on the "Account update required" page to sign in with or create a Microsoft account. (If you have a hotmail.com, live.com, or outlook.com email address, you already have a Microsoft account.) </li>
-        <li>To complete the process, confirm your account update. At this point, you'll be able to sign in to <a href="https://openedx.microsoft.com" target="_blank">https://openedx.microsoft.com</a> site using your Microsoft account.</li>
-        <li>You will then be able to register to the <a href="https://courses.microsoft.com" target="_blank">https://courses.microsoft.com</a> site using your AAD credentials.</li>
-    </ol>
-    <b>Note:</b>Do note that the above mentioned steps will work only if you have learner role and don't have author permissions to sign-in to the CMS. Please contact the customer support team if the solution above does not work for you.<br>
-    <br>
-    <b>Q. How will I be notified of courses that are applicable to my role?</b><br>
-        <p>All Open edX courses are available on <a href="https://microsoft.sharepoint.com/sites/infopedia#/Training">MyLearning</a>, and if a course was developed for your role, you will find it under required or recommended training. You may also receive an email communication about certain campaigns.
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+                outline-style: solid;
+                outline-color: #5882FA;
+                outline-width: 1px;
+            }
 
-</p><br>
-    <b>Q. Will I be able to discover open edX courses on Infopedia?</b><br>
+                .tg td {
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    padding: 10px 5px;
+                    border-width: 1px;
+                    border-bottom-style: solid;
+                    overflow: hidden;
+                    word-break: normal;
+                    border-color: #5882FA;
+                }
+
+                .tg th {
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    padding: 10px 5px;
+                    border-bottom-style: solid;
+                    border-width: 1px;
+                    overflow: hidden;
+                    word-break: normal;
+                    border-color: #5882FA;
+                }
+
+                .tg .tg-yw4l {
+                    vertical-align: top;
+                }
+        </style>
+
+        <table class="tg">
+            <tr bgcolor="#5882FA">
+                <th class="tg-yw4l"></th>
+                <th class="tg-yw4l"><b>Edge</b></th>
+                <th class="tg-yw4l"><b>IE11</b></th>
+            </tr>
+            <tr bgcolor="#A9D0F5">
+                <td class="tg-yw4l"><b>Windows 8/10</b></td>
+                <td class="tg-yw4l">Yes</td>
+                <td class="tg-yw4l">Yes</td>
+            </tr>
+        </table>
+        <h2><b>GET HELP</b></h2>
+        <p><b>Please read the FAQs below first.</b></p>
+        <p>If you don&#39;t find the answer to your questions, <a href="mailto:asklearning@microsoft.com">contact us</a></p><br>
+        <p><b>Q. What do I do if I get an error saying my email address belongs to an existing account when trying to view a course?</b></p>
+        <p>
+            This happens when you have already created an account on https://openedx.microsoft.com using your @microsoft.com email address.
+            To resolve this, please:
+        </p><br>
+        <ol style="list-style: decimal;">
+            <li>Sign-in to the <a href="https://openedx.microsoft.com" target="_blank">https://openedx.microsoft.com</a> site with your @microsoft.com email address.</li>
+            <li>Follow the instructions on the "Account update required" page to sign in with or create a Microsoft account. (If you have a hotmail.com, live.com, or outlook.com email address, you already have a Microsoft account.) </li>
+            <li>To complete the process, confirm your account update. At this point, you'll be able to sign in to <a href="https://openedx.microsoft.com" target="_blank">https://openedx.microsoft.com</a> site using your Microsoft account.</li>
+            <li>You will then be able to register to the <a href="https://courses.microsoft.com" target="_blank">https://courses.microsoft.com</a> site using your AAD credentials.</li>
+        </ol>
+        <b>Note:</b>Do note that the above mentioned steps will work only if you have learner role and don't have author permissions to sign-in to the CMS. Please contact the customer support team if the solution above does not work for you.<br>
+        <br>
+        <b>Q. How will I be notified of courses that are applicable to my role?</b><br>
+        <p>
+            All Open edX courses are available on <a href="https://microsoft.sharepoint.com/sites/infopedia#/Training">MyLearning</a>, and if a course was developed for your role, you will find it under required or recommended training. You may also receive an email communication about certain campaigns.
+
+        </p><br>
+        <b>Q. Will I be able to discover open edX courses on Infopedia?</b><br>
         <p>Yes, the Open edX catalog will be available in Infopedia. If courses have not been required or recommended to you on <a href="https://microsoft.sharepoint.com/sites/infopedia#/Training">MyLearning</a>, you can locate them in the Infopedia catalog most easily with keyword search. Results improve if you filter on training and add MOOC to your query.  Try these search examples:</p>
-    <p><a href="https://microsoft.sharepoint.com/sites/Infopedia/search/pages/results.aspx?term=%22Microsoft%20SharePoint%202016%22%20MOOC&scope=All">"Microsoft SharePoint 2016" MOOC</a></p>
-    <p><a href="https://microsoft.sharepoint.com/sites/Infopedia/search/pages/results.aspx?term=%22Microsoft%20Exchange%20Server%202016%22%20MOOC&scope=All">"Microsoft Exchange Server 2016" MOOC</a></p>
-    <p><a href="https://microsoft.sharepoint.com/sites/Infopedia/search/pages/results.aspx?term=%22Microsoft%20Project%22%20MOOC&scope=All">"Microsoft Project" MOOC</a></p>
-    </p><br>
+        <p><a href="https://microsoft.sharepoint.com/sites/Infopedia/search/pages/results.aspx?term=%22Microsoft%20SharePoint%202016%22%20MOOC&scope=All">"Microsoft SharePoint 2016" MOOC</a></p>
+        <p><a href="https://microsoft.sharepoint.com/sites/Infopedia/search/pages/results.aspx?term=%22Microsoft%20Exchange%20Server%202016%22%20MOOC&scope=All">"Microsoft Exchange Server 2016" MOOC</a></p>
+        <p><a href="https://microsoft.sharepoint.com/sites/Infopedia/search/pages/results.aspx?term=%22Microsoft%20Project%22%20MOOC&scope=All">"Microsoft Project" MOOC</a></p>
+        <br>
         <img src="/static/courses/images/infopedia_courses.png" alt="infopedia_courses_img" height="400">
         <br>
-	<b>Q. Will my grades show in my Infopedia transcript?</b><br>
-	     <p>Yes.</p><br>
-    <b>Q. Will my manager see the courses I’ve taken in InfoPedia?</b><br>
+        <b>Q. Will my grades show in my Infopedia transcript?</b><br>
         <p>Yes.</p><br>
-    <b>Q. What is the minimum percentage required to pass the course?</b><br>
+        <b>Q. Will my manager see the courses I’ve taken in InfoPedia?</b><br>
+        <p>Yes.</p><br>
+        <b>Q. What is the minimum percentage required to pass the course?</b><br>
         <p>Each course can have a unique grading policy. Review the About page for the course to understand the requirement to pass the course.</p><br>
-    <b>Q. How do I track my course progress?</b><br>
+        <b>Q. How do I track my course progress?</b><br>
         <p>Open your course and select the Progress tab </p><br>
-    <b>Q. How do I register?</b><br>
+        <b>Q. How do I register?</b><br>
         <p>To register, click launch on a course card on Infopedia. You can register and enroll directly from Infopedia.</p><br>
-    <b>Q. I’d like to try the Open edX experience, but no courses are available to me right now.</b>
+        <b>Q. I’d like to try the Open edX experience, but no courses are available to me right now.</b>
         <p>The best way to get a sense of the user experience is by taking the edX Demo course. You can also find over 100 courses delivered by Microsoft that are open to the public on <a href="https://www.edx.org/school/microsoft">https://www.edx.org/school/microsoft.</a></p><br>
-	<b>Q. What do I do if I am having trouble viewing a video?</b><br>
-        <p>The video player will auto-select the best video quality option for your bandwidth. You can try a lower quality option, or you can download the video if that option is available. See screenshot.
+        <b>Q. What do I do if I am having trouble viewing a video?</b><br>
+        <p>
+            The video player will auto-select the best video quality option for your bandwidth. You can try a lower quality option, or you can download the video if that option is available. See screenshot.
 
-</p><br>
+        </p><br>
         <img src="/static/courses/images/download_video.png" alt="download_video_img" height="400">
         <br>
-</section>
+        <b>Q. Where can I learn more about the Microsoft Open edX Open Source Project?</b><br>
+        <p>You can get more information on our github repositories <a href="https://github.com/microsoft/edx-platform" target="_blank">https://github.com/microsoft/edx-platform</a> and <a href="https://github.com/microsoft/edx-configuration" target="_blank">https://github.com/microsoft/edx-configuration</a></p><br>
+    </section>
 </main>
