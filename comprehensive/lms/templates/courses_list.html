@@ -1,0 +1,171 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<div class="filler" style="background-image: url(https://i.imgur.com/4lGEJ8c.png);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 15em;
+    opacity: 0.3;"></div>
+<section class="courses-container">
+  <section class="highlighted-courses" style="height: 4em; background-color: ghostwhite;">
+
+    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+      <section class="courses" style="background-color:ghostwhite;">
+
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: #A7B858; font-weight: 600; margin-top: 1%;">Professional Program: Data Science Track</h1>
+      <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+         %  if course.display_name_with_default == 'Microsoft Professional Program : Data Science Orientation' or course.display_name_with_default == 'Analyzing and Visualizing Data with Excel' or course.display_name_with_default == 'Analyzing and Visualizing Data with Power BI' or course.display_name_with_default == 'Analytics Storytelling for Impact' or course.display_name_with_default == 'Ethics and Law in Data and Analytics' or course.display_name_with_default == 'Querying Data with Transact-SQL' or course.display_name_with_default == 'Introduction to R for Data Science' or course.display_name_with_default == 'Introduction to Python for Data Science' or course.display_name_with_default == 'Essential Statistics for Data Analysis using Excel' or course.display_name_with_default == 'Data Science Research Methods: Python Edition' or course.display_name_with_default == 'Principles of Machine Learning: Python Edition' or course.display_name_with_default == 'Developing Big Data Solutions with Azure Machine Learning' or course.display_name_with_default == 'Microsoft Professional Capstone : Data Science':
+  <li class="courses-listing-item">
+              <%include file="course1.html" args="course=course" />
+
+          </li>
+
+           %  endif
+       %endfor
+      </ul>
+</div>
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: #2D8D7F; font-weight: 600; margin-top: 1%;">Professional Program: Big Data Track</h1>
+      <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+           %  if course.display_name_with_default == 'Microsoft Professional Orientation : Big Data' or course.display_name_with_default == 'Analyzing and Visualizing Data with Power BI' or course.display_name_with_default == 'Analyzing and Visualizing Data with Excel' or course.display_name_with_default == 'Introduction to NoSQL Data Solutions' or  course.display_name_with_default == 'Querying Data with Transact-SQL' or course.display_name_with_default == 'Delivering a Relational Data Warehouse' or course.display_name_with_default == 'Processing Big Data with Azure Data Lake Analytics' or course.display_name_with_default == 'Processing Big Data with Hadoop in Azure HDInsight' or course.display_name_with_default == 'Processing Real-Time Data Streams in Azure' or course.display_name_with_default == 'Orchestrating Big Data with Azure Data Factory' or course.display_name_with_default == 'Developing Big Data Solutions with Azure Machine Learning' or course.display_name_with_default == 'Analyzing Big Data with Microsoft R' or course.display_name_with_default == 'Implementing Predictive Analytics with Spark in Azure HDInsight' or course.display_name_with_default == 'Microsoft Professional Capstone : Big Data':
+  <li class="courses-listing-item">
+              <%include file="course2.html" args="course=course" />
+
+          </li>
+
+           %  endif
+       %endfor
+      </ul>
+</div>
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: #00545F; font-weight: 600; margin-top: 1%;">Professional Program: Artificial Intelligence Track</h1>
+      <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+           %  if course.display_name_with_default == 'Introduction to Artificial Intelligence' or course.display_name_with_default == 'Introduction to Python for Data Science' or course.display_name_with_default == 'Essential Mathematics for Artificial Intelligence' or course.display_name_with_default == 'Ethics and Law in Data and Analytics' or course.display_name_with_default == 'Data Science Research Methods: Python Edition' or course.display_name_with_default == 'Principles of Machine Learning: Python Edition' or course.display_name_with_default == 'Deep Learning Explained' or course.display_name_with_default == 'Reinforcement Learning Explained' or course.display_name_with_default == 'Computer Vision and Image Analysis' or course.display_name_with_default == 'Speech Recognition Systems' or course.display_name_with_default == 'Natural Language Processing (NLP)' or course.display_name_with_default == 'Microsoft Professional Capstone : Artificial Intelligence':
+  <li class="courses-listing-item">
+              <%include file="course3.html" args="course=course" />
+
+          </li>
+
+           %  endif
+       %endfor
+      </ul>
+
+</div>
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; deisplay: block; overflow: hidden; padding: .5%;">
+<h1 style="color: #523473; font-weight: 600; margin-top: 1%;">Professional Program: DevOps Track</h1>
+      <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+           %  if course.display_name_with_default == 'DevOps Practices and Principles' or course.display_name_with_default == 'Infrastructure as Code' or course.display_name_with_default == 'Continuous Integration and Continuous Deployment' or course.display_name_with_default == 'Configuration Management for Containerized Delivery' or course.display_name_with_default == 'DevOps Testing' or course.display_name_with_default == 'DevOps for Databases' or course.display_name_with_default == 'Application Monitoring and Feedback Loops' or course.display_name_with_default == 'DevOps for Mobile Apps' or course.display_name_with_default == 'Architecting Distributed Cloud Applications' or course.display_name_with_default == 'Microsoft Professional Capstone: DevOps':
+  <li class="courses-listing-item">
+              <%include file="course4.html" args="course=course" />
+
+          </li>
+
+           %  endif
+       %endfor
+      </ul>
+</div>
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: #FAA54B; font-weight: 600; margin-top: 1%;">Professional Program: Modern IT Support Track</h1>
+      <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+           %  if course.display_name_with_default == 'IT Support: Fundamentals' or course.display_name_with_default == 'IT Support: Communication' or course.display_name_with_default == 'IT Support: Troubleshooting' or course.display_name_with_default == 'IT Support: Documentation' or course.display_name_with_default == 'IT Support: Hardware Essentials' or course.display_name_with_default == 'IT Support: Networking Essentials' or course.display_name_with_default == 'Windows Support Essentials: Installation' or course.display_name_with_default == 'Windows Support Essentials: Configuration' or course.display_name_with_default == 'Windows Support Essentials: Maintenance' or course.display_name_with_default == 'IT Support: Troubleshooting Windows' or course.display_name_with_default == 'Microsoft Office Fundamentals: Outlook, Word, and Excel' or course.display_name_with_default == 'IT Support: Troubleshooting Microsoft Office' or course.display_name_with_default == 'IT Support: Cloud Fundamentals' or course.display_name_with_default == 'Microsoft Professional Capstone: IT Support':
+  <li class="courses-listing-item">
+              <%include file="course5.html" args="course=course" />
+
+          </li>
+
+           %  endif
+       %endfor
+      </ul>
+</div>
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: #4A6BB1; font-weight: 600; margin-top: 1%;">Professional Program: Cloud Administration Track</h1>
+      <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+           %  if course.display_name_with_default == 'Microsoft Professional Orientation : Cloud Administration' or course.display_name_with_default == 'Microsoft Azure Virtual Machines' or course.display_name_with_default == 'Microsoft Azure Virtual Networks' or course.display_name_with_default == 'Microsoft Azure Identity' or course.display_name_with_default == 'Microsoft Azure Storage' or course.display_name_with_default == 'Microsoft Azure App Service' or course.display_name_with_default == 'Databases in Azure' or course.display_name_with_default == 'Azure Security and Compliance' or  course.display_name_with_default == 'Automating Azure Workloads' or course.display_name_with_default == 'Migrating Workloads to Azure ' or course.display_name_with_default == 'Microsoft Professional Capstone: Cloud Administration':
+  <li class="courses-listing-item">
+              <%include file="course6.html" args="course=course" />
+  </li>
+
+           %  endif
+       %endfor
+      </ul>
+</div>
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: tomato; font-weight: 600; margin-top: 1%;">Professional Program: Entry Level Modern Software Development Track</h1>
+      <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+           %  if course.display_name_with_default == 'Logic and Computational Thinking' or course.display_name_with_default == 'Introduction to Python: Absolute Beginner' or course.display_name_with_default == 'Introduction to Python: Fundamentals' or course.display_name_with_default == 'Designing a Technical Solution' or course.display_name_with_default == 'Building Interactive Prototypes using JavaScript' or course.display_name_with_default == 'Building Functional Prototypes using Node.js' or course.display_name_with_default == 'Learn to Program in Java' or course.display_name_with_default == 'Object Oriented Programming in Java' or course.display_name_with_default == 'Algorithms and Data Structures' or course.display_name_with_default == 'Writing Professional Code' or course.display_name_with_default == 'Introduction to Design Thinking' or course.display_name_with_default == 'Developing International Software' or course.display_name_with_default == 'Microsoft Professional Capstone: Entry Level Software Development':
+   <li class="courses-listing-item">
+              <%include file="course7.html" args="course=course" />
+
+          </li>
+
+           %  endif
+       %endfor
+      </ul>
+</div>
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: darkviolet; font-weight: 600; margin-top: 1%;">Professional Program: Front End Web Development</h1>
+<ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+           %  if course.display_name_with_default == 'Microsoft Professional Orientation : Front End Web Development' or course.display_name_with_default == 'Advanced CSS Concepts' or course.display_name_with_default == 'Asynchronous Programming with Javascript' or course.display_name_with_default == 'Building Interactive Prototypes using JavaScript' or course.display_name_with_default == 'Introduction to TypeScript 2' or course.display_name_with_default == 'Introduction to Bootstrap - A Tutorial' or course.display_name_with_default == 'Developing Dynamic Web Applications Using Angular' or course.display_name_with_default == 'Introduction to ReactJS' or course.display_name_with_default == 'AngularJS: Advanced Framework Techniques' or course.display_name_with_default == 'Building Your Azure Skills Toolkit' or course.display_name_with_default == 'DevOps for Developers: How to Get Started' or course.display_name_with_default == 'Microsoft Professional Capstone: Front End Web Development':
+                   <li class="courses-listing-item">
+              <%include file="course8.html" args="course=course" />
+
+          </li>
+
+           %  endif
+       %endfor
+      </ul>
+</div>
+
+<div style="background-color: ghostwhite; height: 2em; width: 101%;"></div>
+<div style="background-color: white; width: 100%; display: block; overflow: hidden; padding: .5%;">
+<h1 style="color: mediumvioletred; font-weight: 600; margin-top: 1%;">Other Professional Courses</h1>
+
+       <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+
+        %  if course.display_name_with_default != 'Microsoft Professional Program : Data Science Orientation' and course.display_name_with_default != 'Analyzing and Visualizing Data with Excel' and course.display_name_with_default != 'Analyzing and Visualizing Data with Power BI' and course.display_name_with_default != 'Analytics Storytelling for Impact' and course.display_name_with_default != 'Ethics and Law in Data and Analytics' and course.display_name_with_default != 'Querying Data with Transact-SQL' and course.display_name_with_default != 'Introduction to R for Data Science' and course.display_name_with_default != 'Introduction to Python for Data Science' and course.display_name_with_default != 'Essential Statistics for Data Analysis using Excel' and course.display_name_with_default != 'Data Science Research Methods: Python Edition' and course.display_name_with_default != 'Principles of Machine Learning: Python Edition' and course.display_name_with_default != 'Developing Big Data Solutions with Azure Machine Learning' and course.display_name_with_default != 'Microsoft Professional Capstone : Data Science' and course.display_name_with_default != 'Microsoft Professional Orientation : Big Data' and course.display_name_with_default != 'Introduction to NoSQL Data Solutions' and course.display_name_with_default != 'Delivering a Relational Data Warehouse' and course.display_name_with_default != 'Processing Big Data with Azure Data Lake Analytics' and course.display_name_with_default != 'Processing Big Data with Hadoop in Azure HDInsight' and course.display_name_with_default != 'Processing Real-Time Data Streams in Azure' and course.display_name_with_default != 'Orchestrating Big Data with Azure Data Factory' and course.display_name_with_default != 'Analyzing Big Data with Microsoft R' and course.display_name_with_default != 'Implementing Predictive Analytics with Spark in Azure HDInsight' and course.display_name_with_default != 'Microsoft Professional Capstone : Big Data' and course.display_name_with_default != 'Introduction to Artificial Intelligence' and course.display_name_with_default != 'Essential Mathematics for Artificial Intelligence' and course.display_name_with_default != 'Deep Learning Explained' and course.display_name_with_default != 'Reinforcement Learning Explained' and course.display_name_with_default != 'Computer Vision and Image Analysis' and course.display_name_with_default != 'Speech Recognition Systems' and course.display_name_with_default != 'Natural Language Processing (NLP)' and course.display_name_with_default != 'Microsoft Professional Capstone : Artificial Intelligence' and course.display_name_with_default != 'DevOps Practices and Principles' and course.display_name_with_default != 'Infrastructure as Code' and course.display_name_with_default != 'Continuous Integration and Continuous Deployment' and course.display_name_with_default != 'Configuration Management for Containerized Delivery' and course.display_name_with_default != 'DevOps Testing' and course.display_name_with_default != 'DevOps for Databases' and course.display_name_with_default != 'Application Monitoring and Feedback Loops' and course.display_name_with_default != 'DevOps for Mobile Apps' and course.display_name_with_default != 'Architecting Distributed Cloud Applications' and course.display_name_with_default != 'Microsoft Professional Capstone: DevOps' and course.display_name_with_default != 'IT Support: Fundamentals' and course.display_name_with_default != 'IT Support: Communication' and course.display_name_with_default != 'IT Support: Troubleshooting' and course.display_name_with_default != 'IT Support: Documentation' and course.display_name_with_default != 'IT Support: Hardware Essentials' and course.display_name_with_default != 'IT Support: Networking Essentials'  and course.display_name_with_default != 'Windows Support Essentials: Installation' and course.display_name_with_default != 'Windows Support Essentials: Configuration' and course.display_name_with_default != 'Windows Support Essentials: Maintenance' and course.display_name_with_default != 'IT Support: Troubleshooting Windows' and course.display_name_with_default != 'Microsoft Office Fundamentals: Outlook, Word, and Excel' and course.display_name_with_default != 'IT Support: Troubleshooting Microsoft Office' and course.display_name_with_default != 'IT Support: Cloud Fundamentals' and course.display_name_with_default != 'Microsoft Professional Capstone: IT Support' and course.display_name_with_default != 'Microsoft Professional Orientation : Cloud Administration' and course.display_name_with_default != 'Microsoft Azure Virtual Machines' and course.display_name_with_default != 'Microsoft Azure Virtual Networks' and course.display_name_with_default != 'Microsoft Azure Identity' and course.display_name_with_default != 'Microsoft Azure Storage' and course.display_name_with_default != 'Microsoft Azure App Service' and course.display_name_with_default != 'Databases in Azure' and course.display_name_with_default != 'Azure Security and Compliance' and course.display_name_with_default != 'Automating Azure Workloads' and course.display_name_with_default != 'Migrating Workloads to Azure ' and course.display_name_with_default != 'Microsoft Professional Capstone: Cloud Administration' and course.display_name_with_default != 'Logic and Computational Thinking' and course.display_name_with_default != 'Introduction to Python: Absolute Beginner' and course.display_name_with_default != 'Introduction to Python: Fundamentals' and course.display_name_with_default != 'Designing a Technical Solution' and course.display_name_with_default != 'Building Interactive Prototypes using JavaScript' and course.display_name_with_default != 'Building Functional Prototypes using Node.js' and course.display_name_with_default != 'Learn to Program in Java' and course.display_name_with_default != 'Object Oriented Programming in Java' and course.display_name_with_default != 'Algorithms and Data Structures' and course.display_name_with_default != 'Writing Professional Code' and course.display_name_with_default != 'Introduction to Design Thinking' and course.display_name_with_default != 'Developing International Software' and course.display_name_with_default != 'Microsoft Professional Capstone: Entry Level Software Development' and course.display_name_with_default != 'Microsoft Professional Orientation : Front End Web Development' and course.display_name_with_default != 'Advanced CSS Concepts' and course.display_name_with_default != 'Asynchronous Programming with Javascript' and course.display_name_with_default != 'Introduction to TypeScript 2' and course.display_name_with_default != 'Introduction to Bootstrap - A Tutorial' and course.display_name_with_default != 'Developing Dynamic Web Applications Using Angular' and course.display_name_with_default != 'Introduction to ReactJS' and course.display_name_with_default != 'AngularJS: Advanced Framework Techniques' and course.display_name_with_default != 'Building Your Azure Skills Toolkit' and course.display_name_with_default != 'DevOps for Developers: How to Get Started' and course.display_name_with_default != 'Microsoft Professional Capstone: Front End Web Development' :
+          <li class="courses-listing-item">
+              <%include file="course9.html" args="course=course" />
+          </li>
+        %endif
+        %endfor
+       </ul>
+
+</div>
+      </section>
+    ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
+      % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
+      <div class="courses-more">
+        <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
+      </div>
+    % endif
+    % endif
+
